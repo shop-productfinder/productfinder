@@ -1,0 +1,324 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: "poppins" , sans-serif;
+}
+
+/**** header bischen grau und padding ****/
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 10px;
+}
+
+/* die header links stylen */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* logo stylen */
+.header a.logo {
+    background: url("../images/rewe_icon.png") no-repeat;
+    display: inline-block;
+    background-size: contain;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+/* alle elemente außer logo auf rechte seite */
+.header-right {
+    float: right;
+}
+
+/* anzeige wo man sich grad befindet */
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* bischen farb änderung */
+.header-right a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* suchleiste */
+.header .such-leiste {
+    float: right;
+    border-radius: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color:  white;
+}
+
+.header .such-leiste .such-text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: 40px;
+    width: 0;
+    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
+}
+
+/* knof in der suchleiste */
+.header .such-btn {
+    background-color:  white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex; /* Flexbox verwenden */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    background-size: cover; /* Hintergrundgröße anpassen */
+    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
+}
+
+/* bild der lupe in dem button */
+img{
+    width: 30px;
+    height: 30px;
+}
+
+/* animation bzw. ausfahren der suchleiste und veränderung der farbe */
+.header .such-leiste:hover > .such-text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.header .such-leiste:hover{
+    background-color: lightgrey;
+}
+
+.header .such-leiste:hover > .such-text::placeholder{
+    color: white;
+}
+
+.header .such-leiste:hover > .such-btn{
+    background-color: lightgrey;
+}
+
+/* container für das menü icon */
+.container{
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* alle drei linien */
+.bar1, .bar2, .bar3{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* drehen und transparent machen der linien */
+.click .bar1{
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.click .bar2{
+    opacity: 0;
+}
+
+.click .bar3{
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/* drop down menü position */
+.menü{
+    position: fixed;
+    background-color: #ddd;
+    top: 100%;
+    left: 0px;
+    border-radius: 10px;
+    width: 350px;
+    height: 0;
+    overflow: hidden;
+    z-index: 999;
+    transition: height 0.5s ;
+}
+.open-drop-down .menü{
+    height: calc(100vh - 100px);
+}
+/* inhalt container */
+.drop-down-menü{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* obere part des drop down menüs */
+.menü-titel{
+    display: flex;
+    align-items: center;
+}
+
+/* titel schrift */
+.menü-titel h2{
+    font-weight: 200;
+}
+
+/* das icon */
+.menü-titel img{
+    border: none;
+    width: 60px;
+
+}
+
+/* die trenn linie */
+.drop-down-menü hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin: 15px 0 10px;
+}
+
+/* alle links im drop down */
+.drop-down-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 12px 0 ;
+}
+
+/* schrift der links */
+.drop-down-link p{
+    width: 100%;
+    margin: 0;
+}
+
+/* bilder der links */
+.drop-down-link img{
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+/* der kleine pfeil */
+.drop-down-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+/* effekte beim hovernüber die links */
+.drop-down-link:hover span{
+    transform: translateX(5px);
+}
+
+.drop-down-link:hover p{
+    font-weight: bold;
+}
+
+/* section für main page */
+.homepage-einteilung{
+    background-color: #F889AF ;
+}
+
+/* Positionierung und Stil für die Überschriften und Hintergrund */
+.hintergrund {
+    display: flex; /* Flexbox verwenden */
+    justify-content: space-between; /* Zwischen den Elementen den verfügbaren Platz verteilen */
+    align-items: center; /* Elemente vertikal zentrieren */
+    min-height: 85vh;
+    background-image: linear-gradient(to right, #F874A0, #F57939);
+    position: relative;
+}
+
+.left-side {
+    width: 75%; /* Linker Bereich nimmt 50% der Breite ein */
+    padding: 20px; /* Etwas Abstand um den linken Bereich hinzufügen */
+    text-align: left; /* Zentrierung des Textes */
+    color: white;
+}
+
+.right-side {
+    border: none;
+    filter: invert(1);
+    width: 500px;
+    height: 400px;
+    opacity: 95%;
+}
+
+/* überschriften-Stile */
+.überschrifft-1 {
+    font-size: 60px;
+    opacity: 20%;
+    margin-bottom: -10px; /* Negative untere Marge für die erste Überschrift */
+}
+
+.überschrifft-2 {
+    position: relative;
+    margin: -30px 0 10px;
+}
+
+.überschrifft-3 {
+    width: 100%;
+    font-size: medium;
+    margin: 1px;
+}
+
+.try-me {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 85px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    transition: 0.2s;
+}
+
+.try-me:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+/*** style für die welle unten ***/
+.boden-welle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.boden-welle svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.boden-welle .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
