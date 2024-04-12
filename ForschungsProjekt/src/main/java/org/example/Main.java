@@ -10,8 +10,10 @@ public class Main {
     public static void main(String[] args) {
 
         // test umgebung laufe durch alle categorys und deren produkte
-        //WebScraper ws = new WebScraper();
+        WebScraper ws = new WebScraper();
 
-        MongoDBconnectionHandler monDBcon = new MongoDBconnectionHandler();
+        for(Product p  : ws.getAllItems()){
+            System.out.println(p.toString());
+        }
     }
 }

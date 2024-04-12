@@ -38,7 +38,7 @@ public class WebScraper implements Webscraper_Interface {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
 
-            // Lesen Sie die Antwort von der Verbindung
+            // Lesen der Antwort von der Verbindung
             BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
             // response der api in json format abfangen

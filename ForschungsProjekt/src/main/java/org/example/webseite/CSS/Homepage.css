@@ -120,6 +120,7 @@ body{
 
 /* knof in der suchleiste */
 .header .such-btn {
+    cursor: pointer;
     background-color:  white;
     float: right;
     width: 40px;
@@ -262,11 +263,12 @@ img{
     left: 0; /* Abstand vom linken Rand */
     background-color: #ddd;
     width: 300px; /* Breite des Menüs */
-    height: 100vh;
-    overflow: hidden;
     padding: 20px;
+    height: 0;
     z-index: 5;
-    transition: 0.3s ease; /* Übergangseffekt für eine sanfte Animation */
+    opacity: 0; /* Start opacity */
+    visibility: hidden; /* Start visibility */
+    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
 }
 
 /* abstand nach unten */
@@ -308,13 +310,11 @@ img{
     font-weight: bold;
 }
 
-/* funktion zum öffnen des menüs */
-.open-drop-down .menü{
-    height: 100vh;
+.menü-geöffnet {
+    height: calc(100vh - 77px);
+    opacity: 1;
+    visibility: visible;
 }
-
-
-
 
 /*****
 

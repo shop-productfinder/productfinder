@@ -6,6 +6,6 @@ function myFunction(x) {
     // Drehe die Balken
     container.classList.toggle("click");
 
-    // öffnen des menüs
-    menü.classList.toggle("open-drop-down")
+    // öffnen und schließen des menüs
+    menü.classList.toggle("menü-geöffnet");
 }
