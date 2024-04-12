@@ -1,13 +1,58 @@
-body{
+*{
     margin: 0;
     padding: 0;
-    position: relative;
-    font-family: "poppins" , sans-serif;
+    box-sizing: border-box;
 }
+
+/*****
+
+        HINTERGRUND DER SEITE
+
+*****/
+
+/* hintergrund der seite */
+body{
+    font-style: italic;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--verlauf);
+    background-size: 400%;
+    animation: bg-animation 15s infinite alternate;
+    position: relative;
+}
+
+/* animation des hintergrunds */
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+
+    100%{
+        background-position: right;
+    }
+
+}
+
+/* variable für den verlauf des hintergrunds */
+:root{
+    --verlauf: linear-gradient(
+            45deg,
+            #ed646f,
+            #fa939c,
+            #f09cf7,
+            #b49cf7
+    )
+}
+
+/*****
+
+        HEADER PART
+
+*****/
 
 /**** header bischen grau und padding ****/
 .header {
-    overflow: hidden;
     background-color: white;
     padding: 20px 10px;
 }
@@ -58,6 +103,8 @@ body{
     height: 40px;
     padding: 5px;
     background-color:  white;
+    display: flex;
+    align-items: center;
 }
 
 .header .such-leiste .such-text{
@@ -138,112 +185,24 @@ img{
     transform: translate(0, -9px) rotate(45deg);
 }
 
-/* drop down menü position */
-.menü{
-    position: fixed;
-    background-color: #ddd;
-    top: 100%;
-    left: 0px;
-    border-radius: 10px;
-    width: 350px;
-    height: 0;
-    overflow: hidden;
-    z-index: 999;
-    transition: height 0.5s ;
-}
-.open-drop-down .menü{
-    height: calc(100vh - 100px);
-}
-/* inhalt container */
-.drop-down-menü{
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-}
+/*****
 
-/* obere part des drop down menüs */
-.menü-titel{
-    display: flex;
-    align-items: center;
-}
+        INHALT DER HOME PAGE
 
-/* titel schrift */
-.menü-titel h2{
-    font-weight: 200;
-}
-
-/* das icon */
-.menü-titel img{
-    border: none;
-    width: 60px;
-
-}
-
-/* die trenn linie */
-.drop-down-menü hr{
-    border: 0;
-    height: 1px;
-    width: 100%;
-    background: black;
-    margin: 15px 0 10px;
-}
-
-/* alle links im drop down */
-.drop-down-link{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin: 12px 0 ;
-}
-
-/* schrift der links */
-.drop-down-link p{
-    width: 100%;
-    margin: 0;
-}
-
-/* bilder der links */
-.drop-down-link img{
-    width: 40px;
-    background: white;
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 15px;
-}
-
-/* der kleine pfeil */
-.drop-down-link span{
-    font-size: 22px;
-    transition: transform 0.5s;
-}
-
-/* effekte beim hovernüber die links */
-.drop-down-link:hover span{
-    transform: translateX(5px);
-}
-
-.drop-down-link:hover p{
-    font-weight: bold;
-}
-
-/* section für main page */
-.homepage-einteilung{
-    background-color: #F889AF ;
-}
+*****/
 
 /* Positionierung und Stil für die Überschriften und Hintergrund */
-.hintergrund {
+.inhalt {
+    font-family: 'Roboto', sans-serif;
     display: flex; /* Flexbox verwenden */
     justify-content: space-between; /* Zwischen den Elementen den verfügbaren Platz verteilen */
     align-items: center; /* Elemente vertikal zentrieren */
     min-height: 85vh;
-    background-image: linear-gradient(to right, #F874A0, #F57939);
-    position: relative;
+    padding: 20px; /* Etwas Abstand um den linken Bereich hinzufügen */
 }
 
 .left-side {
-    width: 75%; /* Linker Bereich nimmt 50% der Breite ein */
-    padding: 20px; /* Etwas Abstand um den linken Bereich hinzufügen */
+    width: 75%; /* Linker Bereich nimmt 75% der Breite ein */
     text-align: left; /* Zentrierung des Textes */
     color: white;
 }
@@ -259,8 +218,7 @@ img{
 /* überschriften-Stile */
 .überschrifft-1 {
     font-size: 60px;
-    opacity: 20%;
-    margin-bottom: -10px; /* Negative untere Marge für die erste Überschrift */
+    opacity: 0.2; /* Anpassung der Transparenz */
 }
 
 .überschrifft-2 {
@@ -286,34 +244,139 @@ img{
 
 .try-me:hover {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 90px;
-    height: 50px;
-    border-radius: 30px;
+    width: 100px;
+    height: 60px;
+    border-radius: 40px;
 }
 
-/*** style für die welle unten ***/
-.boden-welle {
+/*****
+
+        DROP DOWN MENÜ
+
+*****/
+
+.menü{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 77px; /* Abstand zum Header */
+    left: 0; /* Abstand vom linken Rand */
+    background-color: #ddd;
+    width: 300px; /* Breite des Menüs */
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    z-index: 5;
+    transition: 0.3s ease; /* Übergangseffekt für eine sanfte Animation */
+}
+
+/* abstand nach unten */
+.menü-titel{
+    padding: 20px 0;
+}
+
+/* Alle Links im Dropdown-Menü */
+.drop-down-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 12px 0;
+}
+
+/* Bilder der Links */
+.drop-down-link img {
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+
+}
+
+/* Positionierung der Pfeile am rechten Rand */
+.drop-down-link span {
+    margin-left: auto;
+    transition: transform 0.2s;
+}
+
+.drop-down-link:hover span{
+    transform: translateX(5px);
+}
+
+.drop-down-link:hover p{
+    font-weight: bold;
+}
+
+/* funktion zum öffnen des menüs */
+.open-drop-down .menü{
+    height: 100vh;
+}
+
+
+
+
+/*****
+
+        WELLEN AM BODEN
+
+*****/
+
+/* welle am boden der seite */
+section .welle{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
+    height: 150px;
+    background: url("../images/wave.png");
+    background-size: 1000px 150px;
 }
 
-.boden-welle svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 146px;
+/* animation der welle 1 */
+section .welle.welle-1{
+    animation: bewegung-1 30s linear infinite;
+    z-index: 4;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
 }
 
-.boden-welle .shape-fill {
-    fill: #FFFFFF;
+@keyframes bewegung-1 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
 }
 
+/* animation der welle 2 */
+section .welle.welle-2{
+    animation: bewegung-2 15s linear infinite;
+    z-index: 3;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
 
+@keyframes bewegung-2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
 
+/* animation der welle 3 */
+section .welle.welle-3{
+    animation: bewegung-1 30s linear infinite;
+    z-index: 2;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
 
 
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* drop down menü position */
+        .menü{
+            position: fixed;
+            background-color: #ddd;
+            top: 100%;
+            left: 0px;
+            border-radius: 10px;
+            width: 350px;
+            height: calc(100vh - 100px);
+            overflow: hidden;
+            z-index: 999;
+            transition: height 0.5s ;
+        }
+
+        /*
+        .open-drop-down .menü{
+            height: calc(100vh - 100px);
+        }*/
+
+        /* inhalt container */
+        .drop-down-menü{
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        /* obere part des drop down menüs */
+        .menü-titel{
+            display: flex;
+            align-items: center;
+        }
+
+        /* titel schrift */
+        .menü-titel h2{
+            font-weight: 200;
+        }
+
+        /* das icon */
+        .menü-titel img{
+            border: none;
+            width: 60px;
+
+        }
+
+        /* die trenn linie */
+        .drop-down-menü hr{
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: black;
+            margin: 15px 0 10px;
+        }
+
+        /* alle links im drop down */
+        .drop-down-link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin: 12px 0 ;
+        }
+
+        /* schrift der links */
+        .drop-down-link p{
+            width: 100%;
+            margin: 0;
+        }
+
+        /* bilder der links */
+        .drop-down-link img{
+            width: 40px;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+            margin-right: 15px;
+        }
+
+        /* der kleine pfeil */
+        .drop-down-link span{
+            font-size: 22px;
+            transition: transform 0.5s;
+        }
+
+        /* effekte beim hovernüber die links */
+        .drop-down-link:hover span{
+            transform: translateX(5px);
+        }
+
+        .drop-down-link:hover p{
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Menue dropdown nach klick der navigation bars -->
+            <div class="menü">
+
+                <div class="drop-down-menü">
+
+                    <div class="menü-titel">
+                        <img src="../images/rewe_icon.png">
+                        <h2>Herzlich Willkommen</h2>
+                    </div>
+
+                    <hr>
+
+                    <a href="Anmeldung.html" class="drop-down-link">
+                        <img src="../images/login-icon.png">
+                        <p>Anmelden</p>
+            <span> > </span>
+        </a>
+        <a href="Produkte.html" class="drop-down-link">
+            <img src="../images/produkte-icon.png">
+            <p>Produkte</p>
+            <span> > </span>
+        </a>
+        <a href="Kontakt.html" class="drop-down-link">
+            <img src="../images/kontakt-icon.png">
+            <p>Kontakt/Kundenservice</p>
+            <span> > </span>
+        </a>
+        <a href="ÜberUns.html" class="drop-down-link">
+            <img src="../images/about-icon.png">
+            <p>Über uns</p>
+            <span> > </span>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

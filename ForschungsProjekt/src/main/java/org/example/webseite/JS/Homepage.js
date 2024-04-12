@@ -1,11 +1,11 @@
-// funktion für drei linien zum drehen und öffnen des menüs
+// Funktion für drei Linien zum Drehen und Öffnen des Menüs
 function myFunction(x) {
-    var container = document.querySelector('.container');
-    var menü = document.querySelector('.menü');
+    var container = document.querySelector(".container");
+    var menü = document.querySelector(".menü");
 
-    //drehe die balken
-    container.classList.toggle("click")
+    // Drehe die Balken
+    container.classList.toggle("click");
 
-    // öffne und schließe drop menü
+    // öffnen des menüs
     menü.classList.toggle("open-drop-down")
 }
