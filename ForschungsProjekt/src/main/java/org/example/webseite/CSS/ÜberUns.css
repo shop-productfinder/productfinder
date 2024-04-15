@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****
+
+        HEADER PART
+
+*****/
+
+/**** header bischen grau und padding ****/
+.header {
+    background-color: white;
+    padding: 20px 10px;
+}
+
+body{
+    background-image: linear-gradient(to bottom,  white 70%, #c89666);
+}
+
+/* die header links stylen */
+a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* logo stylen */
+a.logo {
+    background: url("../images/Homepage/rewe_icon.png") no-repeat;
+    display: inline-block;
+    background-size: contain;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+/* alle elemente außer logo auf rechte seite */
+.header-right {
+    float: right;
+}
+
+/* anzeige wo man sich grad befindet */
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* bischen farb änderung */
+.header-right a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+/* suchleiste */
+.such-leiste {
+    float: right;
+    border-radius: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color:  white;
+    display: flex;
+    align-items: center;
+}
+
+.such-text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: 40px;
+    width: 0;
+    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
+}
+
+/* knof in der suchleiste */
+.such-btn {
+    cursor: pointer;
+    background-color:  white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex; /* Flexbox verwenden */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    background-size: cover; /* Hintergrundgröße anpassen */
+    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
+}
+
+/* bild der lupe in dem button */
+img{
+    width: 30px;
+    height: 30px;
+}
+
+/* animation bzw. ausfahren der suchleiste und veränderung der farbe */
+.such-leiste:hover > .such-text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.such-leiste:hover{
+    background-color: lightgrey;
+}
+
+.such-leiste:hover > .such-text::placeholder{
+    color: white;
+}
+
+.such-leiste:hover > .such-btn{
+    background-color: lightgrey;
+}
+
+/* container für das menü icon */
+.container{
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* alle drei linien */
+.bar1, .bar2, .bar3{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* drehen und transparent machen der linien */
+.click .bar1{
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.click .bar2{
+    opacity: 0;
+}
+
+.click .bar3{
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/*****
+
+        DROP DOWN MENÜ
+
+*****/
+
+.menü{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 77px; /* Abstand zum Header */
+    left: 0; /* Abstand vom linken Rand */
+    background-color: #ddd;
+    width: 300px; /* Breite des Menüs */
+    padding: 20px;
+    height: 0;
+    z-index: 5;
+    opacity: 0; /* Start opacity */
+    visibility: hidden; /* Start visibility */
+    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
+}
+
+/* abstand nach unten */
+.menü-titel{
+    padding: 20px 0;
+}
+
+/* Alle Links im Dropdown-Menü */
+.drop-down-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 12px 0;
+}
+
+/* Bilder der Links */
+.drop-down-link img {
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+
+}
+
+/* Positionierung der Pfeile am rechten Rand */
+.drop-down-link span {
+    margin-left: auto;
+    transition: transform 0.2s;
+}
+
+.drop-down-link:hover span{
+    transform: translateX(5px);
+}
+
+.drop-down-link:hover p{
+    font-weight: bold;
+}
+
+.menü-geöffnet {
+    height: calc(100vh - 77px);
+    opacity: 1;
+    visibility: visible;
+}
+
+/*****
+
+        INHALT DER SEITE
+
+*****/
+
+section{
+    padding: 4vh;
+    margin: 4vh 10rem 4vh 4vh; /* Anpassung der rechten Seitenmargin */
+    box-sizing: border-box;
+    min-height: fit-content;
+    display: block;
+    height: 80vh;
+}
+
+.section_1, .section_2, .section_3{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertikal zentrieren */
+    gap: 5rem;
+    margin-bottom: 4vh; /* Abstand zwischen den Sections */
+}
+
+/** animation und cuule formen */
+.section_1{
+    border-radius: 56% 40% 50% 27% / 40% 36% 72% 12%;
+    background-image: var(--homepage);
+    animation: animation 15s infinite alternate;
+    background-size: 400%;
+}
+
+:root{
+    --homepage: linear-gradient(
+            45deg,
+            #ed646f,
+            #fa939c,
+            #f09cf7,
+            #b49cf7
+    )
+}
+
+@keyframes animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.section_2 {
+    background-color: white;
+}
+
+.section_3{
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Runde Bilder */
+.bild_container_section_1 img,
+.bild_container_section_2 img,
+.bild_container_section_3 img{
+    border-radius: 50%;
+    width: 400px; /* Anpassen der Bildgröße */
+    height: 400px; /* Anpassen der Bildgröße */
+}
+
+.text_section_1,
+.text_section_2,
+.text_section_3{
+    text-align: center;
+    flex: 1; /* Nimmt den verfügbaren Platz */
+}
+
+.text_section_3{
+    background-color: white;
+}
+
+
+
+.butten_container_section_1,
+.butten_container_section_2,
+.butten_container_section_3{
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-self: center;
+}
+
+.butten_container_section_3 .btn{
+    height: 20px;
+    width: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+    transition: 0.2s ease;
+}
+
+.butten_container_section_3 .btn:hover{
+    background-color: darkgrey;
+    height: 30px;
+    width: 70px;
+}
+
+/* GitHub-Icon-Styling */
+.butten_container_section_1 img{
+    align-self: center;
+    border: none;
+    height: 60px; /* Erhöhe die Höhe */
+    width: 60px; /* Erhöhe die Breite */
+    border-radius: 50%; /* Runde Form */
+    margin-bottom: 1rem; /* Abstand zum Text */
+    cursor:  pointer;
+}
+
+.butten_container_section_1 img:hover{
+    height: 70px;
+    width: 70px;
+    opacity: 0.5;
+}
+
+
+

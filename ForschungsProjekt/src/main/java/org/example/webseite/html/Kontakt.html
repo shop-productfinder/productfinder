@@ -3,11 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>Kontakt</title>
+
+    <!-- css link -->
+    <link href="../CSS/Kontakt.css" rel="stylesheet">
+
+    <!-- JavaScript für die Funktionalität der Seite -->
+    <script src="../JS/Kontakt.js"></script>
+
 </head>
 <body>
-<!-- coming soon bild -->
-<div class="coming-soon">
-    <img src="../images/coming-soon-icon.jpg" style="width: 100%">
+<!-- header -->
+<div class="header">
+
+    <!-- menue icon -->
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- Webseiten Logo -->
+    <a href=Homepage.html class="logo"></a>
+
+    <!-- drei navigations bars im header -->
+    <div class="header-right">
+
+        <!-- Suchleiste -->
+        <div class="such-leiste">
+            <!-- Eingabefeld -->
+            <input type="text" class="such-text" placeholder="Suchen...">
+            <button type="submit" class="such-btn">
+                <img src="../images/Homepage/such-lupe.webp" alt="buttonpng"/>
+            </button>
+        </div>
+
+        <a href=Homepage.html>Home</a>
+        <a class="active" href=Kontakt.html>Contact</a>
+        <a href=About.html>About</a>
+    </div>
+
 </div>
+
+<!-- drop down menü -->
+<div class="menü">
+
+    <div class="menü-titel">
+        <h2>Herzlich Willkommen</h2>
+    </div>
+    <hr>
+
+    <a href="Anmeldung.html" class="drop-down-link">
+        <img src="../images/Homepage/login-icon.png">
+        <p>Anmelden</p>
+        <span> > </span>
+    </a>
+
+    <a href="Produkte.html" class="drop-down-link">
+        <img src="../images/Homepage/produkte-icon.png">
+        <p>Produkte</p>
+        <span> > </span>
+    </a>
+
+    <a href="Kontakt.html" class="drop-down-link">
+        <img src="../images/Homepage/kontakt-icon.png">
+        <p>Kontakt/Kundenservice</p>
+        <span> > </span>
+    </a>
+
+    <a href="About.html" class="drop-down-link">
+        <img src="../images/Homepage/about-icon.png">
+        <p>Über uns</p>
+        <span> > </span>
+    </a>
+
+</div>
+
+<div class="containerformular">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contactform">
+        <div class="title">
+            <h2>Kontakt</h2>
+            <hr>
+        </div>
+        <div class="text">
+            Sie haben eine Frage? Kontaktieren Sie uns gerne über unser Kontakformular:
+        </div>
+        <input type="hidden" name="access_key" value="59c74dd7-144c-47a3-95af-368902d58430">
+        <input type="text" name="name" placeholder="Ihr Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Ihre Email" class="contact-inputs" required>
+        <div class="text">
+            Ich bin
+        </div>
+        <div class="choice">
+            <div class="choice button">
+                <input type="radio" name="role" id="kunde" value="Kunde">
+                <label for="kunde" class="text">Kunde</label>
+            </div>
+            <div class="choice button">
+                <input type="radio" name="role" id="händler" value="Händler">
+                <label for="händler" class="text">Händler</label>
+            </div>
+        </div>
+        <textarea name="message" placeholder="Ihre Nachricht" class="contact-inputs" required></textarea>
+        <button type="submit" onclick="location.href='submitted.html'">Absenden</button>
+    </form>
+    <div class="contact-right">
+        <img src="../images/Contact/message.png" alt="">
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright &copy;2024; Designed by <span class="designer">Timeless Horizon Creations</span></p>
+</div>
+
 </body>
 </html>

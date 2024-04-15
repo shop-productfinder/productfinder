@@ -1,8 +1,6 @@
 package org.example;
 
-import org.example.helper.MongoDBconnectionHandler;
 import org.example.helper.WebScraper;
-import org.example.implementation.Category;
 import org.example.implementation.Product;
 
 

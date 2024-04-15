@@ -3,11 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Produkte</title>
+
+    <!-- css link -->
+    <link href="../CSS/Produkte.css" rel="stylesheet">
+
+    <!-- JavaScript für die Funktionalität der Seite -->
+    <script src="../JS/Produkte.js"></script>
+
 </head>
 <body>
-<!-- coming soon bild -->
-<div class="coming-soon">
-    <img src="../images/coming-soon-icon.jpg" style="width: 100%">
+
+<!-- header -->
+<div class="header">
+
+    <!-- menue icon -->
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- Webseiten Logo -->
+    <a href=Homepage.html class="logo"></a>
+
+    <!-- drei navigations bars im header -->
+    <div class="header-right">
+
+        <!-- Suchleiste -->
+        <div class="such-leiste">
+            <!-- Eingabefeld -->
+            <input type="text" class="such-text" placeholder="Suchen...">
+            <button type="submit" class="such-btn">
+                <img src="../images/Homepage/such-lupe.webp" alt="buttonpng"/>
+            </button>
+        </div>
+
+        <a href=Homepage.html>Home</a>
+        <a href=Kontakt.html>Contact</a>
+        <a href=About.html>About</a>
+    </div>
+
 </div>
+
+<!-- drop down menü -->
+<div class="menü">
+
+    <div class="menü-titel">
+        <h2>Herzlich Willkommen</h2>
+    </div>
+    <hr>
+
+    <a href="Anmeldung.html" class="drop-down-link">
+        <img src="../images/Homepage/login-icon.png">
+        <p>Anmelden</p>
+        <span> > </span>
+    </a>
+
+    <a href="Produkte.html" class="drop-down-link">
+        <img src="../images/Homepage/produkte-icon.png">
+        <p>Produkte</p>
+        <span> > </span>
+    </a>
+
+    <a href="Kontakt.html" class="drop-down-link">
+        <img src="../images/Homepage/kontakt-icon.png">
+        <p>Kontakt/Kundenservice</p>
+        <span> > </span>
+    </a>
+
+    <a href="About.html" class="drop-down-link">
+        <img src="../images/Homepage/about-icon.png">
+        <p>Über uns</p>
+        <span> > </span>
+    </a>
+
+</div>
+
 </body>
 </html>
