@@ -14,10 +14,7 @@
 .header {
     background-color: white;
     padding: 20px 10px;
-}
-
-body{
-    background-image: linear-gradient(to bottom,  white 70%, #c89666);
+    box-shadow: 0 1px 20px;
 }
 
 /* die header links stylen */
@@ -168,6 +165,7 @@ img{
     opacity: 0; /* Start opacity */
     visibility: hidden; /* Start visibility */
     transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
+    box-shadow: 1px 0 4px;
 }
 
 /* abstand nach unten */
@@ -221,123 +219,107 @@ img{
 
 *****/
 
-section{
-    padding: 4vh;
-    margin: 4vh 10rem 4vh 4vh; /* Anpassung der rechten Seitenmargin */
-    box-sizing: border-box;
-    min-height: fit-content;
-    display: block;
-    height: 80vh;
+/* Slideshow Container */
+/* Slideshow Container */
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.section_1, .section_2, .section_3{
+.content-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertikal zentrieren */
-    gap: 5rem;
-    margin-bottom: 4vh; /* Abstand zwischen den Sections */
+    align-items: center;
 }
 
-/** animation und cuule formen */
-.section_1{
-    border-radius: 56% 40% 50% 27% / 40% 36% 72% 12%;
-    background-image: var(--homepage);
-    animation: animation 15s infinite alternate;
-    background-size: 400%;
+.text_section_1, .text_section_2, .text_section_3 {
+    margin-left: 20px; /* Abstand zum Bild */
+    text-align: left; /* Linksbündig ausrichten */
 }
 
-:root{
-    --homepage: linear-gradient(
-            45deg,
-            #ed646f,
-            #fa939c,
-            #f09cf7,
-            #b49cf7
-    )
+/* Alle Slides */
+.section {
+    display: none; /* Versteckt alle Slides standardmäßig */
+    position: relative; /* Position relativ setzen */
+    flex: 0 0 auto; /* Flex-Shrink und Flex-Basis festlegen */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    text-align: center; /* Zentriert den Text horizontal */
 }
 
-@keyframes animation{
-    0%{
-        background-position: left;
-    }
-    100%{
-        background-position: right;
-    }
+/* Aktiven Slide anzeigen */
+.section.fade {
+    display: flex;
 }
 
-.section_2 {
-    background-color: white;
-}
-
-.section_3{
-    background-color: white;
+/* Bild im Slide */
+.bild_container_section_1 img {
     border-radius: 50%;
+    max-width: 400px; /* Maximale Breite für das Bild */
+    max-height: 400px; /* Maximale Höhe für das Bild */
+    width: 100%; /* Bild auf 100% der Container-Breite setzen */
+    height: auto; /* Automatische Höhe beibehalten */
 }
 
-/* Runde Bilder */
-.bild_container_section_1 img,
-.bild_container_section_2 img,
-.bild_container_section_3 img{
-    border-radius: 50%;
-    width: 400px; /* Anpassen der Bildgröße */
-    height: 400px; /* Anpassen der Bildgröße */
-}
-
-.text_section_1,
-.text_section_2,
-.text_section_3{
-    text-align: center;
+/* Text im Slide */
+.text_section_1 {
     flex: 1; /* Nimmt den verfügbaren Platz */
+    padding: 0 20px; /* Innenabstand für den Text */
+    margin-left: 20px; /* Abstand zum Bild */
+    text-align: left; /* Linksbündig ausrichten */
 }
 
-.text_section_3{
-    background-color: white;
-}
-
-
-
-.butten_container_section_1,
-.butten_container_section_2,
-.butten_container_section_3{
+/* Vorher & Nachher Buttons */
+.prev, .next {
     cursor: pointer;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    align-self: center;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: #bbb;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-.butten_container_section_3 .btn{
-    height: 20px;
-    width: 60px;
-    border-radius: 10px;
-    border: none;
-    background-color: lightgrey;
-    transition: 0.2s ease;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.butten_container_section_3 .btn:hover{
-    background-color: darkgrey;
-    height: 30px;
-    width: 70px;
+/* Punkte für die Slides */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: absolute;
+    bottom: 10px;
 }
 
-/* GitHub-Icon-Styling */
-.butten_container_section_1 img{
-    align-self: center;
-    border: none;
-    height: 60px; /* Erhöhe die Höhe */
-    width: 60px; /* Erhöhe die Breite */
-    border-radius: 50%; /* Runde Form */
-    margin-bottom: 1rem; /* Abstand zum Text */
-    cursor:  pointer;
+.active, .dot:hover {
+    background-color: #717171;
 }
 
-.butten_container_section_1 img:hover{
-    height: 70px;
-    width: 70px;
-    opacity: 0.5;
+/* animation für die punkte und knöpre */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
 

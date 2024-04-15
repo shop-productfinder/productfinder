@@ -16,34 +16,16 @@ body{
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: var(--verlauf);
-    background-size: 400%;
-    animation: bg-animation 15s infinite alternate;
+    background-image: linear-gradient(
+            45deg,
+            #3c99dc,
+            #66d3fa,
+            #d5f3fe);
+    background-size: 300%;
     position: relative;
 }
 
-/* animation des hintergrunds */
-@keyframes bg-animation{
-    0%{
-        background-position: left;
-    }
 
-    100%{
-        background-position: right;
-    }
-
-}
-
-/* variable für den verlauf des hintergrunds */
-:root{
-    --verlauf: linear-gradient(
-            45deg,
-            #ed646f,
-            #fa939c,
-            #f09cf7,
-            #b49cf7
-    )
-}
 
 /*****
 
@@ -55,6 +37,7 @@ body{
 .header {
     background-color: white;
     padding: 20px 10px;
+    box-shadow: 0 1px 20px;
 }
 
 /* die header links stylen */
@@ -210,10 +193,9 @@ img{
 
 .right-side {
     border: none;
-    filter: invert(1);
-    width: 500px;
-    height: 400px;
-    opacity: 95%;
+    width: 600px;
+    height: 500px;
+
 }
 
 /* überschriften-Stile */
@@ -269,6 +251,7 @@ img{
     opacity: 0; /* Start opacity */
     visibility: hidden; /* Start visibility */
     transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
+    box-shadow: 1px 0 4px;
 }
 
 /* abstand nach unten */
