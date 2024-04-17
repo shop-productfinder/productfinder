@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+
+    <!-- css link -->
+    <link href="../CSS/About.css" rel="stylesheet">
+
+    <!-- JavaScript für die Funktionalität der Seite -->
+    <script src="../JS/About.js"></script>
+
+</head>
+
+<!-- inhalt der seite -->
+<body>
+
+<!-- header -->
+<div class="header">
+
+    <!-- menue icon -->
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- Webseiten Logo -->
+    <a href=Homepage.html class="logo"></a>
+
+    <!-- drei navigations bars im header -->
+    <div class="header-right">
+
+        <!-- Suchleiste -->
+        <div class="such-leiste">
+            <!-- Eingabefeld -->
+            <input type="text" class="such-text" placeholder="Suchen...">
+            <button type="submit" class="such-btn">
+                <img src="../images/Homepage/such-lupe.webp" alt="buttonpng"/>
+            </button>
+        </div>
+
+        <a href=Homepage.html>Home</a>
+        <a href=Kontakt.html>Contact</a>
+        <a class="active" href=About.html>About</a>
+    </div>
+
+</div>
+
+<!-- drop down menü -->
+<div class="menü">
+
+    <div class="menü-titel">
+        <h2>Herzlich Willkommen</h2>
+    </div>
+    <hr>
+
+    <a href="Anmeldung.html" class="drop-down-link">
+        <img src="../images/Homepage/login-icon.png">
+        <p>Anmelden</p>
+        <span> > </span>
+    </a>
+
+    <a href="Produkte.html" class="drop-down-link">
+        <img src="../images/Homepage/produkte-icon.png">
+        <p>Produkte</p>
+        <span> > </span>
+    </a>
+
+    <a href="Kontakt.html" class="drop-down-link">
+        <img src="../images/Homepage/kontakt-icon.png">
+        <p>Kontakt/Kundenservice</p>
+        <span> > </span>
+    </a>
+
+    <a href="About.html" class="drop-down-link">
+        <img src="../images/Homepage/about-icon.png">
+        <p>Über uns</p>
+        <span> > </span>
+    </a>
+
+</div>
+
+<!-- slideshow -->
+<div class="slides-container">
+
+    <!-- unterteilung der webseite in sections -->
+    <div class="section fade">
+
+        <div class="content-container">
+            <div class="bild_container_section_1">
+                <img src="../images/About/goethe-uni.jpg" alt="Goethe-Uni-Bild">
+            </div>
+
+            <div class="text_section_1">
+                <p class="section_1_p_1">Wer sind Wir?</p>
+                <h1 class="section_1_titel">Studenten</h1>
+                <p class="section_1_p_2">Hier unsere Beschreibung</p>
+                <div class="button-container">
+                    <img src="../images/About/github-icon.png" alt="github-icon">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section fade">
+
+        <div class="content-container">
+            <div class="bild_container_section_2">
+                <img src="../images/About/rewe-regale.jpg" alt="rewe-regale-bild">
+            </div>
+
+            <div class="text_section_2">
+                <p class="section_2_p_1">Was ist unser Ziel</p>
+                <h1 class="section_2_titel">Besseres Einkaufserlebnis</h1>
+                <p class="section_2_p_2">Hier unsere Beschreibung</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section fade">
+
+        <div class="content-container">
+            <div class="bild_container_section_3">
+                <img src="../images/About/produkt-scannen.jpg" alt="produkt scan bild">
+            </div>
+
+            <div class="text_section_3">
+                <p class="section_3_p_1">wie funktioniert es?</p>
+                <h1 class="section_3_titel">Einführung</h1>
+                <p class="section_3_p_2">unsere erklärung eventuel ein einführ video?</p>
+                <div class="button-container">
+                    <button class="btn btn_color" onclick="window.open('https://www.youtube.com/watch?v=35KDnej1hlI')">
+                        tutorial
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- vorher&nachher knopf -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <br>
+</div>
+
+<!-- punkte -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+</body>
+</html>

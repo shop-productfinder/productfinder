@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-image: url("../images/thc/thc_planets.png");
+    opacity: 0.9
+    ;
+}
+
+.text{
+    color: white;
+}
+
+/*****
+
+        HEADER PART
+
+*****/
+
+/**** header bischen grau und padding ****/
+.header {
+    padding: 20px 10px;
+}
+
+.logo img{
+    width:700px;
+    height: 80px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* die header links stylen */
+a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* logo stylen */
+a.logo {
+    background: url("../images/thc/thc_schriftzug.png") no-repeat;
+    display: inline-block;
+    background-size: 200px;
+    width: 100%;
+    max-width: 100px;
+    height: 50px;
+}
+
+/* alle elemente außer logo auf rechte seite */
+.header-right {
+    float: right;
+}
+
+/* anzeige wo man sich grad befindet */
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* bischen farb änderung */
+.header-right a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+
+/* alle drei linien */
+.bar1, .bar2, .bar3{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* drehen und transparent machen der linien */
+.click .bar1{
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.click .bar2{
+    opacity: 0;
+}
+
+.click .bar3{
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/*****
+
+        INHALT DER SEITE
+
+*****/
+
+
+:root{
+    --homepage: linear-gradient(
+            45deg,
+            #ed646f,
+            #fa939c,
+            #f09cf7,
+            #b49cf7
+    )
+}
+
+@keyframes animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+/* Runde Bilder */
+.bild_container_section_1 img,
+.bild_container_section_2 img,
+.bild_container_section_3 img{
+    border-radius: 50%;
+    width: 400px; /* Anpassen der Bildgröße */
+    height: 400px; /* Anpassen der Bildgröße */
+}
+
+.text_section_1,
+.text_section_2,
+.text_section_3{
+    text-align: center;
+    flex: 1; /* Nimmt den verfügbaren Platz */
+}
+
+.text_section_3{
+    background-color: white;
+}
+
+
+
+.butten_container_section_1,
+.butten_container_section_2,
+.butten_container_section_3{
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-self: center;
+}
+
+.butten_container_section_3 .btn{
+    height: 20px;
+    width: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+    transition: 0.2s ease;
+}
+
+.butten_container_section_3 .btn:hover{
+    background-color: darkgrey;
+    height: 30px;
+    width: 70px;
+}
+
+/* GitHub-Icon-Styling */
+.butten_container_section_1 img{
+    align-self: center;
+    border: none;
+    height: 60px; /* Erhöhe die Höhe */
+    width: 60px; /* Erhöhe die Breite */
+    border-radius: 50%; /* Runde Form */
+    margin-bottom: 1rem; /* Abstand zum Text */
+    cursor:  pointer;
+}
+
+.butten_container_section_1 img:hover{
+    height: 70px;
+    width: 70px;
+    opacity: 0.5;
+}
+
+
+.bodycontainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+
+.blendercontainer{
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    opacity: 0.5;
+    border: solid white;
+    margin: 20px;
+}
+
+.appcontainer{
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    opacity: 0.7;
+    border: solid white;
+    margin: 20px;
+}
+
+.title h2{
+    font-weight: 300;
+    color: white;
+    font-size: 20px;
+}
+.title hr{
+    border: none;
+    width: 180px;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.3;
+    margin-top: 85px;
+    margin-left: 30px;
+    text-align: left;
+}
+.footer p{
+    color: white;
+    font-size: 9px;
+}
