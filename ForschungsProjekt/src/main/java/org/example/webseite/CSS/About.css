@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<<<<<<< HEAD * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*****
@@ -13,138 +12,140 @@
 
 /**** header bischen grau und padding ****/
 .header {
-    background-color: white;
-    padding: 20px 10px;
-    box-shadow: 0 1px 20px;
+  background-color: white;
+  padding: 20px 10px;
+  box-shadow: 0 1px 20px;
 }
 
 /* die header links stylen */
 a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 }
 
 /* logo stylen */
 a.logo {
-    background: url("../images/Homepage/rewe_icon.png") no-repeat;
-    display: inline-block;
-    background-size: contain;
-    width: 100%;
-    max-width: 100px;
-    height: auto;
+  background: url("../images/Homepage/rewe_icon.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
 }
 
 /* alle elemente außer logo auf rechte seite */
 .header-right {
-    float: right;
+  float: right;
 }
 
 /* anzeige wo man sich grad befindet */
 .header a.active {
-    background-color: dodgerblue;
-    color: white;
+  background-color: dodgerblue;
+  color: white;
 }
 
 /* bischen farb änderung */
-.header-right a:hover{
-    background-color: #ddd;
-    color: black;
+.header-right a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 /* suchleiste */
 .such-leiste {
-    float: right;
-    border-radius: 40px;
-    height: 40px;
-    padding: 5px;
-    background-color:  white;
-    display: flex;
-    align-items: center;
+  float: right;
+  border-radius: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
-.such-text{
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    line-height: 40px;
-    width: 0;
-    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
+.such-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  line-height: 40px;
+  width: 0;
+  transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
 }
 
 /* knof in der suchleiste */
 .such-btn {
-    cursor: pointer;
-    background-color:  white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    display: flex; /* Flexbox verwenden */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    background-size: cover; /* Hintergrundgröße anpassen */
-    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
+  cursor: pointer;
+  background-color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex; /* Flexbox verwenden */
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Vertikal zentrieren */
+  background-size: cover; /* Hintergrundgröße anpassen */
+  transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
 }
 
 /* bild der lupe in dem button */
-img{
-    width: 30px;
-    height: 30px;
+img {
+  width: 30px;
+  height: 30px;
 }
 
 /* animation bzw. ausfahren der suchleiste und veränderung der farbe */
-.such-leiste:hover > .such-text{
-    width: 240px;
-    padding: 0 6px;
+.such-leiste:hover > .such-text {
+  width: 240px;
+  padding: 0 6px;
 }
 
-.such-leiste:hover{
-    background-color: lightgrey;
+.such-leiste:hover {
+  background-color: lightgrey;
 }
 
-.such-leiste:hover > .such-text::placeholder{
-    color: white;
+.such-leiste:hover > .such-text::placeholder {
+  color: white;
 }
 
-.such-leiste:hover > .such-btn{
-    background-color: lightgrey;
+.such-leiste:hover > .such-btn {
+  background-color: lightgrey;
 }
 
 /* container für das menü icon */
-.container{
-    display: inline-block;
-    cursor: pointer;
+.container {
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* alle drei linien */
-.bar1, .bar2, .bar3{
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 /* drehen und transparent machen der linien */
-.click .bar1{
-    transform: translate(0, 9px) rotate(-45deg);
+.click .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
 }
 
-.click .bar2{
-    opacity: 0;
+.click .bar2 {
+  opacity: 0;
 }
 
-.click .bar3{
-    transform: translate(0, -9px) rotate(45deg);
+.click .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
 }
 
 /*****
@@ -153,65 +154,64 @@ img{
 
 *****/
 
-.menü{
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    top: 77px; /* Abstand zum Header */
-    left: 0; /* Abstand vom linken Rand */
-    background-color: #ddd;
-    width: 300px; /* Breite des Menüs */
-    padding: 20px;
-    height: 0;
-    z-index: 5;
-    opacity: 0; /* Start opacity */
-    visibility: hidden; /* Start visibility */
-    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
-    box-shadow: 1px 0 4px;
+.menü {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  top: 77px; /* Abstand zum Header */
+  left: 0; /* Abstand vom linken Rand */
+  background-color: #ddd;
+  width: 300px; /* Breite des Menüs */
+  padding: 20px;
+  height: 0;
+  z-index: 5;
+  opacity: 0; /* Start opacity */
+  visibility: hidden; /* Start visibility */
+  transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
+  box-shadow: 1px 0 4px;
 }
 
 /* abstand nach unten */
-.menü-titel{
-    padding: 20px 0;
+.menü-titel {
+  padding: 20px 0;
 }
 
 /* Alle Links im Dropdown-Menü */
 .drop-down-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin: 12px 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 12px 0;
 }
 
 /* Bilder der Links */
 .drop-down-link img {
-    height: 40px;
-    width: 40px;
-    background: white;
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 15px;
-
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
 }
 
 /* Positionierung der Pfeile am rechten Rand */
 .drop-down-link span {
-    margin-left: auto;
-    transition: transform 0.2s;
+  margin-left: auto;
+  transition: transform 0.2s;
 }
 
-.drop-down-link:hover span{
-    transform: translateX(5px);
+.drop-down-link:hover span {
+  transform: translateX(5px);
 }
 
-.drop-down-link:hover p{
-    font-weight: bold;
+.drop-down-link:hover p {
+  font-weight: bold;
 }
 
 .menü-geöffnet {
-    height: calc(100vh - 77px);
-    opacity: 1;
-    visibility: visible;
+  height: calc(100vh - 77px);
+  opacity: 1;
+  visibility: visible;
 }
 
 /*****
@@ -223,430 +223,111 @@ img{
 /* Slideshow Container */
 /* Slideshow Container */
 .slides-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text_section_1, .text_section_2, .text_section_3 {
-    margin-left: 20px; /* Abstand zum Bild */
-    text-align: left; /* Linksbündig ausrichten */
+.text_section_1,
+.text_section_2,
+.text_section_3 {
+  margin-left: 20px; /* Abstand zum Bild */
+  text-align: left; /* Linksbündig ausrichten */
 }
 
 /* Alle Slides */
 .section {
-    display: none; /* Versteckt alle Slides standardmäßig */
-    position: relative; /* Position relativ setzen */
-    flex: 0 0 auto; /* Flex-Shrink und Flex-Basis festlegen */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    text-align: center; /* Zentriert den Text horizontal */
+  display: none; /* Versteckt alle Slides standardmäßig */
+  position: relative; /* Position relativ setzen */
+  flex: 0 0 auto; /* Flex-Shrink und Flex-Basis festlegen */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  text-align: center; /* Zentriert den Text horizontal */
 }
 
 /* Aktiven Slide anzeigen */
 .section.fade {
-    display: flex;
+  display: flex;
 }
 
 /* Bild im Slide */
 .bild_container_section_1 img {
-    border-radius: 50%;
-    max-width: 400px; /* Maximale Breite für das Bild */
-    max-height: 400px; /* Maximale Höhe für das Bild */
-    width: 100%; /* Bild auf 100% der Container-Breite setzen */
-    height: auto; /* Automatische Höhe beibehalten */
+  border-radius: 50%;
+  max-width: 400px; /* Maximale Breite für das Bild */
+  max-height: 400px; /* Maximale Höhe für das Bild */
+  width: 100%; /* Bild auf 100% der Container-Breite setzen */
+  height: auto; /* Automatische Höhe beibehalten */
 }
 
 /* Text im Slide */
 .text_section_1 {
-    flex: 1; /* Nimmt den verfügbaren Platz */
-    padding: 0 20px; /* Innenabstand für den Text */
-    margin-left: 20px; /* Abstand zum Bild */
-    text-align: left; /* Linksbündig ausrichten */
+  flex: 1; /* Nimmt den verfügbaren Platz */
+  padding: 0 20px; /* Innenabstand für den Text */
+  margin-left: 20px; /* Abstand zum Bild */
+  text-align: left; /* Linksbündig ausrichten */
 }
 
 /* Vorher & Nachher Buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    background-color: #bbb;
-    opacity: 0.6;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color: #bbb;
+  opacity: 0.6;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* Punkte für die Slides */
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    position: absolute;
-    bottom: 10px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  bottom: 10px;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.active,
+.dot:hover {
+  background-color: #717171;
 }
 
 /* animation für die punkte und knöpre */
 .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-=======
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*****
-
-        HEADER PART
-
-*****/
-
-/**** header bischen grau und padding ****/
-.header {
-    background-color: white;
-    padding: 20px 10px;
-    box-shadow: 0 1px 20px;
-}
-
-/* die header links stylen */
-a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-}
-
-/* logo stylen */
-a.logo {
-    background: url("../images/Homepage/rewe_icon.png") no-repeat;
-    display: inline-block;
-    background-size: contain;
-    width: 100%;
-    max-width: 100px;
-    height: auto;
-}
-
-/* alle elemente außer logo auf rechte seite */
-.header-right {
-    float: right;
-}
-
-/* anzeige wo man sich grad befindet */
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-
-/* bischen farb änderung */
-.header-right a:hover{
-    background-color: #ddd;
-    color: black;
-}
-
-/* suchleiste */
-.such-leiste {
-    float: right;
-    border-radius: 40px;
-    height: 40px;
-    padding: 5px;
-    background-color:  white;
-    display: flex;
-    align-items: center;
-}
-
-.such-text{
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    line-height: 40px;
-    width: 0;
-    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
-}
-
-/* knof in der suchleiste */
-.such-btn {
-    cursor: pointer;
-    background-color:  white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    display: flex; /* Flexbox verwenden */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    background-size: cover; /* Hintergrundgröße anpassen */
-    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
-}
-
-/* bild der lupe in dem button */
-img{
-    width: 30px;
-    height: 30px;
-}
-
-/* animation bzw. ausfahren der suchleiste und veränderung der farbe */
-.such-leiste:hover > .such-text{
-    width: 240px;
-    padding: 0 6px;
-}
-
-.such-leiste:hover{
-    background-color: lightgrey;
-}
-
-.such-leiste:hover > .such-text::placeholder{
-    color: white;
-}
-
-.such-leiste:hover > .such-btn{
-    background-color: lightgrey;
-}
-
-/* container für das menü icon */
-.container{
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* alle drei linien */
-.bar1, .bar2, .bar3{
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* drehen und transparent machen der linien */
-.click .bar1{
-    transform: translate(0, 9px) rotate(-45deg);
-}
-
-.click .bar2{
-    opacity: 0;
-}
-
-.click .bar3{
-    transform: translate(0, -9px) rotate(45deg);
-}
-
-/*****
-
-        DROP DOWN MENÜ
-
-*****/
-
-.menü{
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    top: 77px; /* Abstand zum Header */
-    left: 0; /* Abstand vom linken Rand */
-    background-color: #ddd;
-    width: 300px; /* Breite des Menüs */
-    padding: 20px;
-    height: 0;
-    z-index: 5;
-    opacity: 0; /* Start opacity */
-    visibility: hidden; /* Start visibility */
-    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
-    box-shadow: 1px 0 4px;
-}
-
-/* abstand nach unten */
-.menü-titel{
-    padding: 20px 0;
-}
-
-/* Alle Links im Dropdown-Menü */
-.drop-down-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin: 12px 0;
-}
-
-/* Bilder der Links */
-.drop-down-link img {
-    height: 40px;
-    width: 40px;
-    background: white;
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 15px;
-
-}
-
-/* Positionierung der Pfeile am rechten Rand */
-.drop-down-link span {
-    margin-left: auto;
-    transition: transform 0.2s;
-}
-
-.drop-down-link:hover span{
-    transform: translateX(5px);
-}
-
-.drop-down-link:hover p{
-    font-weight: bold;
-}
-
-.menü-geöffnet {
-    height: calc(100vh - 77px);
+  from {
+    opacity: 0.4;
+  }
+  to {
     opacity: 1;
-    visibility: visible;
+  }
 }
-
-/*****
-
-        INHALT DER SEITE
-
-*****/
-
-/* Slideshow Container */
-/* Slideshow Container */
-.slides-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text_section_1, .text_section_2, .text_section_3 {
-    margin-left: 20px; /* Abstand zum Bild */
-    text-align: left; /* Linksbündig ausrichten */
-}
-
-/* Alle Slides */
-.section {
-    display: none; /* Versteckt alle Slides standardmäßig */
-    position: relative; /* Position relativ setzen */
-    flex: 0 0 auto; /* Flex-Shrink und Flex-Basis festlegen */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    text-align: center; /* Zentriert den Text horizontal */
-}
-
-/* Aktiven Slide anzeigen */
-.section.fade {
-    display: flex;
-}
-
-/* Bild im Slide */
-.bild_container_section_1 img {
-    border-radius: 50%;
-    max-width: 400px; /* Maximale Breite für das Bild */
-    max-height: 400px; /* Maximale Höhe für das Bild */
-    width: 100%; /* Bild auf 100% der Container-Breite setzen */
-    height: auto; /* Automatische Höhe beibehalten */
-}
-
-/* Text im Slide */
-.text_section_1 {
-    flex: 1; /* Nimmt den verfügbaren Platz */
-    padding: 0 20px; /* Innenabstand für den Text */
-    margin-left: 20px; /* Abstand zum Bild */
-    text-align: left; /* Linksbündig ausrichten */
-}
-
-/* Vorher & Nachher Buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    background-color: #bbb;
-    opacity: 0.6;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* Punkte für die Slides */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    position: absolute;
-    bottom: 10px;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* animation für die punkte und knöpre */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
->>>>>>> 25a3f21bc69b6e6aedb220022d38b1417de0891a

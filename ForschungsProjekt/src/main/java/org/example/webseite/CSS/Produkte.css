@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*****
 
         HEADER PART
@@ -7,137 +6,139 @@
 
 /**** header bischen grau und padding ****/
 .header {
-    background-color: white;
-    padding: 20px 10px;
+  background-color: white;
+  padding: 20px 10px;
 }
 
 /* die header links stylen */
 .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 }
 
 /* logo stylen */
 .header a.logo {
-    background: url("../images/Homepage/rewe_icon.png") no-repeat;
-    display: inline-block;
-    background-size: contain;
-    width: 100%;
-    max-width: 100px;
-    height: auto;
+  background: url("../images/Homepage/rewe_icon.png") no-repeat;
+  display: inline-block;
+  background-size: contain;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
 }
 
 /* alle elemente außer logo auf rechte seite */
 .header-right {
-    float: right;
+  float: right;
 }
 
 /* anzeige wo man sich grad befindet */
 .header a.active {
-    background-color: dodgerblue;
-    color: white;
+  background-color: dodgerblue;
+  color: white;
 }
 
 /* bischen farb änderung */
-.header-right a:hover{
-    background-color: #ddd;
-    color: black;
+.header-right a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 /* suchleiste */
 .header .such-leiste {
-    float: right;
-    border-radius: 40px;
-    height: 40px;
-    padding: 5px;
-    background-color:  white;
-    display: flex;
-    align-items: center;
+  float: right;
+  border-radius: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
-.header .such-leiste .such-text{
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    line-height: 40px;
-    width: 0;
-    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
+.header .such-leiste .such-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  line-height: 40px;
+  width: 0;
+  transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
 }
 
 /* knof in der suchleiste */
 .header .such-btn {
-    cursor: pointer;
-    background-color:  white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    display: flex; /* Flexbox verwenden */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    background-size: cover; /* Hintergrundgröße anpassen */
-    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
+  cursor: pointer;
+  background-color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex; /* Flexbox verwenden */
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Vertikal zentrieren */
+  background-size: cover; /* Hintergrundgröße anpassen */
+  transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
 }
 
 /* bild der lupe in dem button */
-img{
-    width: 30px;
-    height: 30px;
+img {
+  width: 30px;
+  height: 30px;
 }
 
 /* animation bzw. ausfahren der suchleiste und veränderung der farbe */
-.header .such-leiste:hover > .such-text{
-    width: 240px;
-    padding: 0 6px;
+.header .such-leiste:hover > .such-text {
+  width: 240px;
+  padding: 0 6px;
 }
 
-.header .such-leiste:hover{
-    background-color: lightgrey;
+.header .such-leiste:hover {
+  background-color: lightgrey;
 }
 
-.header .such-leiste:hover > .such-text::placeholder{
-    color: white;
+.header .such-leiste:hover > .such-text::placeholder {
+  color: white;
 }
 
-.header .such-leiste:hover > .such-btn{
-    background-color: lightgrey;
+.header .such-leiste:hover > .such-btn {
+  background-color: lightgrey;
 }
 
 /* container für das menü icon */
-.container{
-    display: inline-block;
-    cursor: pointer;
+.container {
+  display: inline-block;
+  cursor: pointer;
 }
 
 /* alle drei linien */
-.bar1, .bar2, .bar3{
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 /* drehen und transparent machen der linien */
-.click .bar1{
-    transform: translate(0, 9px) rotate(-45deg);
+.click .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
 }
 
-.click .bar2{
-    opacity: 0;
+.click .bar2 {
+  opacity: 0;
 }
 
-.click .bar3{
-    transform: translate(0, -9px) rotate(45deg);
+.click .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
 }
 
 /*****
@@ -146,280 +147,71 @@ img{
 
 *****/
 
-.menü{
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    top: 77px; /* Abstand zum Header */
-    left: 0; /* Abstand vom linken Rand */
-    background-color: #ddd;
-    width: 300px; /* Breite des Menüs */
-    padding: 20px;
-    height: 0;
-    z-index: 5;
-    opacity: 0; /* Start opacity */
-    visibility: hidden; /* Start visibility */
-    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
+.menü {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  top: 77px; /* Abstand zum Header */
+  left: 0; /* Abstand vom linken Rand */
+  background-color: #ddd;
+  width: 300px; /* Breite des Menüs */
+  padding: 20px;
+  height: 0;
+  z-index: 5;
+  opacity: 0; /* Start opacity */
+  visibility: hidden; /* Start visibility */
+  transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
 }
 
 /* abstand nach unten */
-.menü-titel{
-    padding: 20px 0;
+.menü-titel {
+  padding: 20px 0;
 }
 
 /* Alle Links im Dropdown-Menü */
 .drop-down-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin: 12px 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 12px 0;
 }
 
 /* Bilder der Links */
 .drop-down-link img {
-    height: 40px;
-    width: 40px;
-    background: white;
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 15px;
-
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
 }
 
 /* Positionierung der Pfeile am rechten Rand */
 .drop-down-link span {
-    margin-left: auto;
-    transition: transform 0.2s;
+  margin-left: auto;
+  transition: transform 0.2s;
 }
 
-.drop-down-link:hover span{
-    transform: translateX(5px);
+.drop-down-link:hover span {
+  transform: translateX(5px);
 }
 
-.drop-down-link:hover p{
-    font-weight: bold;
-}
-
-.menü-geöffnet {
-    height: calc(100vh - 77px);
-    opacity: 1;
-    visibility: visible;
-}
-
-.footer{
-    background-color: rgb(233, 190, 111);
-    padding: 20px;
-    text-align: center;
-}
-.footer p{
-    color: white;
-    font-size: 12px;
-}
-=======
-/*****
-
-        HEADER PART
-
-*****/
-
-/**** header bischen grau und padding ****/
-.header {
-    background-color: white;
-    padding: 20px 10px;
-}
-
-/* die header links stylen */
-.header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-}
-
-/* logo stylen */
-.header a.logo {
-    background: url("../images/Homepage/rewe_icon.png") no-repeat;
-    display: inline-block;
-    background-size: contain;
-    width: 100%;
-    max-width: 100px;
-    height: auto;
-}
-
-/* alle elemente außer logo auf rechte seite */
-.header-right {
-    float: right;
-}
-
-/* anzeige wo man sich grad befindet */
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-
-/* bischen farb änderung */
-.header-right a:hover{
-    background-color: #ddd;
-    color: black;
-}
-
-/* suchleiste */
-.header .such-leiste {
-    float: right;
-    border-radius: 40px;
-    height: 40px;
-    padding: 5px;
-    background-color:  white;
-    display: flex;
-    align-items: center;
-}
-
-.header .such-leiste .such-text{
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    line-height: 40px;
-    width: 0;
-    transition: width 0.4s, padding 0.4s; /* Übergangseffekt für eine sanfte Animation */
-}
-
-/* knof in der suchleiste */
-.header .such-btn {
-    cursor: pointer;
-    background-color:  white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    display: flex; /* Flexbox verwenden */
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    background-size: cover; /* Hintergrundgröße anpassen */
-    transition: color 0.4s; /* Übergangseffekt für eine sanfte Animation */
-}
-
-/* bild der lupe in dem button */
-img{
-    width: 30px;
-    height: 30px;
-}
-
-/* animation bzw. ausfahren der suchleiste und veränderung der farbe */
-.header .such-leiste:hover > .such-text{
-    width: 240px;
-    padding: 0 6px;
-}
-
-.header .such-leiste:hover{
-    background-color: lightgrey;
-}
-
-.header .such-leiste:hover > .such-text::placeholder{
-    color: white;
-}
-
-.header .such-leiste:hover > .such-btn{
-    background-color: lightgrey;
-}
-
-/* container für das menü icon */
-.container{
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* alle drei linien */
-.bar1, .bar2, .bar3{
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* drehen und transparent machen der linien */
-.click .bar1{
-    transform: translate(0, 9px) rotate(-45deg);
-}
-
-.click .bar2{
-    opacity: 0;
-}
-
-.click .bar3{
-    transform: translate(0, -9px) rotate(45deg);
-}
-
-/*****
-
-        DROP DOWN MENÜ
-
-*****/
-
-.menü{
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    top: 77px; /* Abstand zum Header */
-    left: 0; /* Abstand vom linken Rand */
-    background-color: #ddd;
-    width: 300px; /* Breite des Menüs */
-    padding: 20px;
-    height: 0;
-    z-index: 5;
-    opacity: 0; /* Start opacity */
-    visibility: hidden; /* Start visibility */
-    transition: height 0.3s ease, opacity 0.5s linear, visibility 0.1s;
-}
-
-/* abstand nach unten */
-.menü-titel{
-    padding: 20px 0;
-}
-
-/* Alle Links im Dropdown-Menü */
-.drop-down-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin: 12px 0;
-}
-
-/* Bilder der Links */
-.drop-down-link img {
-    height: 40px;
-    width: 40px;
-    background: white;
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 15px;
-
-}
-
-/* Positionierung der Pfeile am rechten Rand */
-.drop-down-link span {
-    margin-left: auto;
-    transition: transform 0.2s;
-}
-
-.drop-down-link:hover span{
-    transform: translateX(5px);
-}
-
-.drop-down-link:hover p{
-    font-weight: bold;
+.drop-down-link:hover p {
+  font-weight: bold;
 }
 
 .menü-geöffnet {
-    height: calc(100vh - 77px);
-    opacity: 1;
-    visibility: visible;
+  height: calc(100vh - 77px);
+  opacity: 1;
+  visibility: visible;
 }
->>>>>>> 25a3f21bc69b6e6aedb220022d38b1417de0891a
+
+.footer {
+  background-color: rgb(233, 190, 111);
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  color: white;
+  font-size: 12px;
+}
