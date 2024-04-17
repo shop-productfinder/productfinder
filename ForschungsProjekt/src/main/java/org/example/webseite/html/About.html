@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8" />
     <title>About</title>
@@ -75,77 +75,77 @@
     </div>
 
     <!-- slideshow -->
-    <div class="slides-container">
-      <!-- unterteilung der webseite in sections -->
-      <div class="section fade">
-        <div class="content-container">
-          <div class="bild_container_section_1">
-            <img src="../images/About/goethe-uni.jpg" alt="Goethe-Uni-Bild" />
-          </div>
+    <div class="slideshow-container">
 
-          <div class="text_section_1">
-            <p class="section_1_p_1">Wer sind Wir?</p>
-            <h1 class="section_1_titel">Studenten</h1>
-            <p class="section_1_p_2">Hier unsere Beschreibung</p>
-            <div class="button-container">
-              <img src="../images/About/github-icon.png" alt="github-icon" />
-            </div>
+      <div class="meine-slides fade">
+        <div class="section-1">
+          <div class="image-container">
+            <img src="../images/About/goethe-uni.jpg" alt="goethe_bild" class="Bild">
           </div>
-        </div>
-      </div>
-
-      <div class="section fade">
-        <div class="content-container">
-          <div class="bild_container_section_2">
-            <img src="../images/About/rewe-regale.jpg" alt="rewe-regale-bild" />
-          </div>
-
-          <div class="text_section_2">
-            <p class="section_2_p_1">Was ist unser Ziel</p>
-            <h1 class="section_2_titel">Besseres Einkaufserlebnis</h1>
-            <p class="section_2_p_2">Hier unsere Beschreibung</p>
+          <div class="text">
+            <h1>Wer sind Wir?</h1>
+            <p>Wir sind ein Team von Informatiker*innen, das sich im Studium zusammengefunden hat,
+              um unsere Ideen praktisch umzusetzen. Unsere zwei Productfinder-Innovatoren kommen aus
+              unseren zwei Anwendungsbereichen. Dominik hat jahrelang Erfahrung im Einzelhandel
+              gesammelt, in helfenden sowie strategischen Tätigkeiten und Lisa hat sich schon immer
+              gewünscht ihren Einkauf schneller und effizienter gestalten zu können, um Zeit
+              (und auch Nerven;) sparen zu können. Nach erfolgreicher Zusammenarbeit an anderen
+              Projekten haben wir beschlossen unsere Idee von einem digitalen und visuellem Helfer
+              im Geschäft umzusetzen. Transparenz, Nachhaltigkeit und Ihr persönlicher Datenschutz
+              liegen uns dabei besonders am Herzen. Sie sind an unseren anderen Projekten interessiert?
+              Schauen Sie gerne hier</p>
           </div>
         </div>
       </div>
 
-      <div class="section fade">
-        <div class="content-container">
-          <div class="bild_container_section_3">
-            <img
-              src="../images/About/produkt-scannen.jpg"
-              alt="produkt scan bild"
-            />
+      <div class="meine-slides fade">
+        <div class="section-2">
+          <div class="image-container">
+            <img src="../images/About/rewe-regale.jpg" alt="rewe_bild" class="Bild">
           </div>
-
-          <div class="text_section_3">
-            <p class="section_3_p_1">wie funktioniert es?</p>
-            <h1 class="section_3_titel">Einführung</h1>
-            <p class="section_3_p_2">
-              unsere erklärung eventuel ein einführ video?
-            </p>
-            <div class="button-container">
-              <button
-                class="btn btn_color"
-                onclick="window.open('https://www.youtube.com/watch?v=35KDnej1hlI')"
-              >
-                tutorial
-              </button>
-            </div>
+          <div class="text">
+            <h1>Was ist unser Ziel?</h1>
+            <p>Sie alle kennen das Problem ein Produkt im Supermarkt zu suchen, im richtigen Regal
+              zu stehen und es einfach nicht zu finden.
+              Unsere Anwendung hat das Ziel Ihr Einkaufserlebnis nachhaltig zu verbessern.
+              Nachdem Sie Ihr gewünschtes Produkt in unserer App in die Suche eingegeben oder
+              eingescannt haben, wird Ihnen die genaue Lage in der Filiale und visuell durch ein
+              leuchtendes Preisschild am richtigen Regalfach angezeigt.
+              Vielleicht kennen Sie auch die andere Seite und Sie arbeiten in einem Lebensmittelgeschäft.
+              Wenn Sie die Regale in Ihrer Filiale mit neuen Produkten befüllen, lässt sich das richtige
+              Regalfach mit unserer Anwendung blitzschnell finden. Auch hier leuchtet unser Preisschild
+              (in unteschieldichen farben?) auf. Zudem lässt sich das digitale Preisschild mit unserem
+              Regalplan verbinden.</p>
           </div>
         </div>
       </div>
 
-      <!-- vorher&nachher knopf -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      <br />
+      <div class="meine-slides fade">
+        <div class="section-3">
+          <div class="image-container">
+            <img src="../images/About/produkt-scannen.jpg" alt="produkt_bild" class="Bild">
+          </div>
+          <div class="text">
+            <h1>Wie funktioniert es?</h1>
+            <p>Als erstes wählen Sie Ihre Filiale aus. Dann können Sie das Produkt
+              entweder einscannen (zum Beispiel von einem leeren Produkt zuhause)
+              oder per Name oder EAn Nummer suchen.
+              Nun wird Ihnen die Lage des Produkts in der Filiale angezeigt.
+              Zusätzlich haben Sie die Option die Produktdetails einzusehen,
+              wie den Preis oder den Warenbestand. Im betreffenden Regal leuchtet
+              nun das Preisschild von Ihrem gesuchten Produkt auf.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
 
-    <!-- punkte -->
-    <div style="text-align: center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
   </body>
 </html>

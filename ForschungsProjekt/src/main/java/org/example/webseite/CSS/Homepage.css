@@ -52,8 +52,9 @@ body {
   display: inline-block;
   background-size: 120px 20px;
   width: 100%;
-  max-width: 100px;
-  height: auto;
+  zoom: 2;
+  max-width: 150px;
+  height: 50px;
 }
 
 /* alle elemente außer logo auf rechte seite */
