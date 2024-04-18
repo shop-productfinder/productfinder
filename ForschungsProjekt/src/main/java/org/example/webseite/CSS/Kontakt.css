@@ -333,10 +333,9 @@ img {
 }
 
 .footer {
-  background-color: lightgrey;
+  background-color: transparent;
   padding: 20px;
   text-align: center;
-  box-shadow: 10px 10px 10px 10px;
 }
 .footer p {
   color: black;
