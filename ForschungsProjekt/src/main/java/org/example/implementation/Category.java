@@ -1,11 +1,15 @@
 package org.example.implementation;
 
-import org.example.interfaces.Category_Interface;
 
+import org.bson.codecs.pojo.annotations.BsonIgnore;
+import org.example.interfaces.Category_Interface;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Category implements Category_Interface {
+    private List<String> produktIDs;
+    @BsonIgnore
     private List<Product> products;
     private String name;
 
@@ -21,6 +25,24 @@ public class Category implements Category_Interface {
         this.name = name;
     }
 
+    /**
+     * leerer konstruktor
+     */
+    public Category(){
+
+    }
+
+
+    /**
+     * gibt alle produkt IDs einer kategorie wieder
+     *
+     * @return produktIDs
+     * @author Dominik
+     */
+    @Override
+    public List<String> getProductIDs() {
+        return produktIDs;
+    }
 
     /**
      * gibt alle produkte einer kategorie wieder
@@ -67,7 +89,23 @@ public class Category implements Category_Interface {
             products = new ArrayList<>();
         }
         products.addAll(produkte);
+        this.produktIDs = products.stream().map(Product::getID).collect(Collectors.toList());
     }
+
+    /**
+     * fügt eine id einer category hinzu
+     *
+     * @param productID
+     * @author Dominik
+     */
+    @Override
+    public void addProductIDs(String productID){
+        if(produktIDs == null){
+            produktIDs = new ArrayList<>();
+        }
+        produktIDs.add(productID);
+    }
+
 
     /**
      * gibt String inhalt der klasse wieder
@@ -76,8 +114,11 @@ public class Category implements Category_Interface {
      * @author Dominik
      */
     @Override
-    public String toString(){
-        return "Kategorie: " + name + "\n" +
-                "Produkte: " + products.toString() + "\n";
+    public String toString() {
+        return "Category{" +
+                "products=[" + products.stream().map(Product::getID).collect(Collectors.joining(",")) + "]" +
+                ", name='" + name + '\'' +
+                '}';
     }
+
 }

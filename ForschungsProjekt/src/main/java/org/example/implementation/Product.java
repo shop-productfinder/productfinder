@@ -1,5 +1,6 @@
 package org.example.implementation;
 
+import org.bson.codecs.pojo.annotations.BsonIgnore;
 import org.example.interfaces.Product_Interface;
 
 public class Product implements Product_Interface {
@@ -7,6 +8,8 @@ public class Product implements Product_Interface {
     private String name;
     private String bild;
     private String nan;
+    private String categroyName;
+    @BsonIgnore
     private Category category;
     private double price;
 
@@ -24,7 +27,15 @@ public class Product implements Product_Interface {
         this.bild = bild;
         this.nan = nan;
         this.category = category;
+        this.categroyName = category.getCategoryName();
         this.price = price;
+    }
+
+    /**
+     * leerer Konstruktor
+     */
+    public Product(){
+
     }
 
     /**
@@ -83,6 +94,17 @@ public class Product implements Product_Interface {
     }
 
     /**
+     * gibt den namen einer category eines produkts wieder
+     *
+     * @return categoryName
+     * @author Dominik
+     */
+    @Override
+    public String getCategoryName() {
+        return categroyName;
+    }
+
+    /**
      * gibt die category eines produkts wieder
      *
      * @return category
@@ -138,6 +160,17 @@ public class Product implements Product_Interface {
     }
 
     /**
+     * setzt den namen der Category zu dem das produkt gehört
+     *
+     * @param category
+     * @author Dominik
+     */
+    @Override
+    public void setCategoryName(String category) {
+        this.categroyName = category;
+    }
+
+    /**
      * setzt die kategorie zu dem das produkt gehört
      *
      * @param category
@@ -165,13 +198,14 @@ public class Product implements Product_Interface {
      * @author Dominik
      */
     @Override
-    public String toString(){
-        return "Artikel: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Preis: " + price + "\n" +
-                "Bild: " + bild + "\n" +
-                "NAN-Code: " + nan + "\n" +
-                "Kategorie: " + category.getCategoryName() + "\n";
+    public String toString() {
+        return "Product{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", bild='" + bild + '\'' +
+                ", nan='" + nan + '\'' +
+                ", category=" + categroyName +
+                ", price=" + price +
+                '}';
     }
-
 }
