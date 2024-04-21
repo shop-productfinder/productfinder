@@ -92,15 +92,19 @@ public class WebScraper implements Webscraper_Interface {
      *
      *  @author Dominik
      */
-    public void updateCategories(){
+    private void updateCategories(){
         // laufe durch alle Kategorien
         for (Category category : categories){
 
-            // holle alle produkte der Kategorie
-            List<Product> produkte = getProductsOfCategory(category.getCategoryName());
+            // wenn die kategory noch nicht die produkte besitzt
+            if(category.getProducts() == null){
 
-            // füge die liste aller produkte zu der category hinzu
-            category.addProducts(produkte);
+                // holle alle produkte der Kategorie
+                List<Product> produkte = getProductsOfCategory(category.getCategoryName());
+
+                // füge die liste aller produkte zu der category hinzu
+                category.addProducts(produkte);
+            }
         }
     }
 

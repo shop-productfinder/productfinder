@@ -5,6 +5,15 @@ import org.example.implementation.Product;
 import java.util.List;
 
 public interface Category_Interface {
+
+
+    /**
+     * gibt alle produkt IDs einer kategorie wieder
+     * @return products
+     * @author Dominik
+     */
+    List<String> getProductIDs();
+
     /**
      * gibt alle produkte einer kategorie wieder
      * @return products
@@ -32,6 +41,13 @@ public interface Category_Interface {
      * @author Dominik
      */
     void addProducts(List<Product> produkte);
+
+    /**
+     * fügt eine id einer category hinzu
+     * @param productID
+     * @author Dominik
+     */
+    void addProductIDs(String productID);
 
     /**
      * gibt String inhalt der klasse wieder

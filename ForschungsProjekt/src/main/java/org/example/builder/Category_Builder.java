@@ -4,7 +4,6 @@ import org.example.implementation.Category;
 import org.example.implementation.Product;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 

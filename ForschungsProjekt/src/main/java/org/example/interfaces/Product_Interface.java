@@ -39,6 +39,13 @@ public interface Product_Interface {
     String getNAN();
 
     /**
+     * gibt den namen einer category eines produkts wieder
+     * @return categoryName
+     * @author Dominik
+     */
+    String getCategoryName();
+
+    /**
      * gibt die category eines produkts wieder
      * @return category
      * @author Dominik
@@ -72,6 +79,13 @@ public interface Product_Interface {
      * @author Dominik
      */
     void setNAN(String nan);
+
+    /**
+     * setzt den namen der Category zu dem das produkt gehört
+     * @param category
+     * @author Dominik
+     */
+    void setCategoryName(String category);
 
     /**
      * setzt die kategorie zu dem das produkt gehört
